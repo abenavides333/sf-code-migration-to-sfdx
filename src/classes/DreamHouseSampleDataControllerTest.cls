@@ -1,8 +1,7 @@
-@isTest
+@IsTest
 private class DreamHouseSampleDataControllerTest {
 
-    @isTest
-    static void test_deleteAll() {
+    @IsTest static void test_deleteAll() {
 
         Property__c property = new Property__c();
         Broker__c broker = new Broker__c();
@@ -10,8 +9,8 @@ private class DreamHouseSampleDataControllerTest {
         insert property;
         insert broker;
 
-        System.assertEquals( 1, [ SELECT count() FROM Property__c ] );
-        System.assertEquals( 1, [ SELECT count() FROM Broker__c ] );
+        System.assertEquals( 1, [ SELECT COUNT() FROM Property__c ] );
+        System.assertEquals( 1, [ SELECT COUNT() FROM Broker__c ] );
 
         Test.startTest();
 
@@ -19,9 +18,12 @@ private class DreamHouseSampleDataControllerTest {
 
         Test.stopTest();
 
-        System.assertEquals( 0, [ SELECT count() FROM Property__c ] );
-        System.assertEquals( 0, [ SELECT count() FROM Broker__c ] );
+        System.assertEquals( 0, [ SELECT COUNT() FROM Property__c ] );
+        System.assertEquals( 0, [ SELECT COUNT() FROM Broker__c ] );
 
     }
 
+    @IsTest static void getHelloWorld() {
+        System.assertEquals('Hello World!', DreamHouseSampleDataController.getHelloWorld());
+    }
 }
