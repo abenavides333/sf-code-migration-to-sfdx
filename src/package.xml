@@ -22,6 +22,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomApplication</name>
     </types>
     <types>
@@ -70,6 +74,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>PermissionSet</name>
     </types>
     <types>
@@ -83,10 +91,6 @@
     <types>
         <members>*</members>
         <name>SharingRules</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>LightningComponentBundle</name>
     </types>
     <types>
         <members>*</members>
