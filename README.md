@@ -3,10 +3,19 @@
 Project to migrate Salesforce sources using Metadata format to Package Sources format to be used with SFDX and GitHub.
 
 ## TODO
-- [x] Create a Salesforce DX project in the sources' directory: `sfdx force:project:create -n my-prod-playground --template standard`
+- [x] Create a Salesforce DX project in the sources' directory: `sfdx force:project:create -n my-prod-playground --manifest --template standard`
 - [x] Update the [.forceignore](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm) file to ignore the profiles: `**profile`
 - [x] Convert Metadata sources to Package Sources for SFDX: `sfdx force:mdapi:convert --rootdir src --outputdir force-app-tmp`
-- [ ] Move old files with git to the new folder structure: `git mv src/applications/* force-app/main/default/applications/`
+- [x] One by one, delete the old directory in the **_src_** folder, and move the respective, new folder in **_force-app-tmp_** to **_force-app_**. Git will identify this operation as a move operation for the source files (`git mv`).
+- [x] Replace the default package.xml file in the **_manifest_**  directory with the version in the **_src_** directory.
+- [x] Delete the **_src_** directory.
+
+### Git rename observations
+- The following files won't keep the log history because they are changing structure in the files:
+  - Static Resources
+  - Objects
+- Sharing Rules can break during renaming operation. To avoid this, move files in small batches.
+- Some objects could keep the log history after the renaming operation.
 
 ## Documentation
 ### Salesforce CI/CD
