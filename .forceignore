@@ -11,5 +11,7 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-# Profiles
+# Custom files
 **profile
+**installedPackages
+**standard*.app
