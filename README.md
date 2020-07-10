@@ -15,7 +15,7 @@ Project to migrate Salesforce sources using Metadata format to Package Sources f
 - The following files won't keep the log history because they are changing structure in the files:
   - Static Resources
   - Objects
-- Sharing Rules can break during renaming operation. To avoid this, move files in small batches.
+- Sharing Rules can break during renaming operation. To avoid this, move files in small batches. Some files could be marked as deleted and added again in the new path. 
 - Some objects could keep the log history after the renaming operation.
 
 ## Documentation
