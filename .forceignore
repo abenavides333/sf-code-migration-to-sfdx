@@ -13,5 +13,16 @@ package.xml
 
 # Custom files
 **profile
+
+# Custom files in sources with errors
 **installedPackages
 **standard*.app
+**objects/Idea
+**objects/StreamActivityAccess
+**objects/CommSubscriptionChannelType
+**layouts/SocialPost-Social Post Layout.layout
+**layouts/UserAlt-User Profile Layout.layout
+**sharingRules/RequestsForAccessSIQ.sharingRules
+**sharingRules/SiqUserBlacklist.sharingRules
+**sharingRules/SocialPost.sharingRules
+**sharingRules/StreamActivityAccess.sharingRules

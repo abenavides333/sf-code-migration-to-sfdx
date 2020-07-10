@@ -9,6 +9,7 @@ Project to migrate Salesforce sources using Metadata format to Package Sources f
 - [x] One by one, delete the old directory in the **_src_** folder, and move the respective, new folder in **_force-app-tmp_** to **_force-app_**. Git will identify this operation as a move operation for the source files (`git mv`).
 - [x] Replace the default package.xml file in the **_manifest_**  directory with the version in the **_src_** directory.
 - [x] Delete the **_src_** directory.
+- [x] Validate sources can be push to a Scratch Org.
 
 ### Git rename observations
 - The following files won't keep the log history because they are changing structure in the files:
