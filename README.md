@@ -10,6 +10,7 @@ Project to migrate Salesforce sources using Metadata format to Package Sources f
 - [x] Replace the default package.xml file in the **_manifest_**  directory with the version in the **_src_** directory.
 - [x] Delete the **_src_** directory.
 - [x] Validate sources can be push to a Scratch Org.
+- [ ] Validate sources can be deploy to a Dev Org.
 
 ### Git rename observations
 - The following files won't keep the log history because they are changing structure in the files:
