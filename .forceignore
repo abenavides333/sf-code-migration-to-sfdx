@@ -20,9 +20,21 @@ package.xml
 **objects/Idea
 **objects/StreamActivityAccess
 **objects/CommSubscriptionChannelType
+**layouts/Account*
+**layouts/Contact*
+**layouts/Lead*
+**layouts/Opportunity*
 **layouts/SocialPost-Social Post Layout.layout
 **layouts/UserAlt-User Profile Layout.layout
 **sharingRules/RequestsForAccessSIQ.sharingRules
 **sharingRules/SiqUserBlacklist.sharingRules
 **sharingRules/SocialPost.sharingRules
 **sharingRules/StreamActivityAccess.sharingRules
+**WorkAccess
+**WorkBadge
+**WorkBadgeDefinition
+**WorkFeedbackRequest
+**WorkReward
+**WorkRewardFund
+**WorkRewardFundType
+**WorkThanks

@@ -10,7 +10,7 @@ Project to migrate Salesforce sources using Metadata format to Package Sources f
 - [x] Replace the default package.xml file in the **_manifest_**  directory with the version in the **_src_** directory.
 - [x] Delete the **_src_** directory.
 - [x] Validate sources can be push to a Scratch Org.
-- [ ] Validate sources can be deploy to a Dev Org.
+- [x] Validate sources can be deploy to a Dev Org: `sfdx force:source:deploy --targetusername DevHub -x manifest/package.xml -l RunLocalTests`
 
 ### Git rename observations
 - The following files won't keep the log history because they are changing structure in the files:
@@ -25,4 +25,4 @@ Project to migrate Salesforce sources using Metadata format to Package Sources f
 - [Simplify Your Development Process with Continuous Integration](https://trailhead.salesforce.com/content/learn/trails/move-to-a-continuous-integration-development)
 - [Develop an App with Salesforce CLI and Source Control](https://trailhead.salesforce.com/content/learn/projects/develop-app-with-salesforce-cli-and-source-control)
 - [Convert the Metadata Source to Source Format](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_convert_mdapi.htm)
-
+- [Develop Against Any Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_develop_any_org.htm)
