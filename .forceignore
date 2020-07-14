@@ -1,0 +1,40 @@
+# List files or directories below to ignore them when running force:source:push, force:source:pull, and force:source:status
+# More information: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm
+#
+
+package.xml
+
+# LWC configuration files
+**/jsconfig.json
+**/.eslintrc.json
+
+# LWC Jest
+**/__tests__/**
+
+# Custom files
+**profile
+
+# Custom files in sources with errors
+**installedPackages
+**standard*.app
+**objects/Idea
+**objects/StreamActivityAccess
+**objects/CommSubscriptionChannelType
+**layouts/Account*
+**layouts/Contact*
+**layouts/Lead*
+**layouts/Opportunity*
+**layouts/SocialPost-Social Post Layout.layout
+**layouts/UserAlt-User Profile Layout.layout
+**sharingRules/RequestsForAccessSIQ.sharingRules
+**sharingRules/SiqUserBlacklist.sharingRules
+**sharingRules/SocialPost.sharingRules
+**sharingRules/StreamActivityAccess.sharingRules
+**WorkAccess
+**WorkBadge
+**WorkBadgeDefinition
+**WorkFeedbackRequest
+**WorkReward
+**WorkRewardFund
+**WorkRewardFundType
+**WorkThanks
