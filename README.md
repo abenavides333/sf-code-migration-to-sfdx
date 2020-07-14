@@ -19,8 +19,20 @@ Project to migrate Salesforce sources using Metadata format to Package Sources f
 - Sharing Rules can break during renaming operation. To avoid this, move files in small batches. Some files could be marked as deleted and added again in the new path. 
 - Some objects could keep the log history after the renaming operation.
 
-## Documentation
-### Salesforce CI/CD
+# SFDX development with GitHub
+
+The following process describes the steps to follow to develop new features with the GitHub sources.
+
+## TODO
+1. \(Optional) Clone GitHub repository.
+2. Create a new branch using the GitFlow branching model for Git (feature, hotfix, release).
+3. Create a new scratch org to work on the development changes: `sfdx force:org:create --setdefaultusername --setalias [scratch-alias] --definitionfile config/project-scratch-def.json`
+4. Push Metadata changes to the new scratch org: `sfdx force:source:push`
+5. Once your changes are ready, Pull Metadata from the scratch org into your local machine: `sfdx force:source:pull`
+6. Commit your changes and create a PR in GitHub to review and merge them.
+
+# References
+## Salesforce CI/CD
 - [Package Development Model](https://trailhead.salesforce.com/content/learn/modules/sfdx_dev_model)
 - [Simplify Your Development Process with Continuous Integration](https://trailhead.salesforce.com/content/learn/trails/move-to-a-continuous-integration-development)
 - [Develop an App with Salesforce CLI and Source Control](https://trailhead.salesforce.com/content/learn/projects/develop-app-with-salesforce-cli-and-source-control)
