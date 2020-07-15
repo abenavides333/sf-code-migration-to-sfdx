@@ -52,10 +52,10 @@ The following process describes how to set up CI with GibHub and SFDX.
     - [x] Select the new permission set and Save.
 - [x] Add encrypted Travis server key to GitHub source files.
   - [x] Add a _.travis.yml_ file to the root directory in your repository to tell Travis CI what to do.
-  - [x] If applies, remove the line that loooks like this: `openssl aes-256-cbc -K $encrypted_0db5e9c4fee8_key -iv $encrypted_0db5e9c4fee8_iv -in assets/server.key.enc -out assets/server.key -d`
+  - [x] If applies, remove the line that looks like this: `openssl aes-256-cbc -K $encrypted_0db5e9c4fee8_key -iv $encrypted_0db5e9c4fee8_iv -in assets/server.key.enc -out assets/server.key -d`
   - [x] Create an _assets_ directory and copy the _server.key_ file generated.
   - [x] Log in to Travis CI with your GitHub credentials: `travis login --org`
-  - [x] Create an encrypted version for the _server.key_ file: `travis encrypt-file assets/server.key assets/server.key.enc --add`
+  - [x] Create an encrypted version for the _server.key_ file (use a linux machine to avoid issues with the encryption process): `travis encrypt-file assets/server.key assets/server.key.enc --add`
   - [x] Delete the _server.key_ file.
 - [ ] Create build file (YAML).
 
