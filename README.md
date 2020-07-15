@@ -33,6 +33,7 @@ The following process describes how to set up CI with GibHub and SFDX.
   - [x] Request and generate the certificate: `openssl req -new -key server.key -out server.csr`. _No need to add challenge password (just press enter) neither optional company name (just enter ".")_. 
   - [x] Generate the SSL certificate: `openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out server.crt` 
 - [x] Create the Connected App in SF (App Manager) for Travis CI.
+  - [x] Enable Dev Hub in the Salesforce instance: Development -> Dev Hub -> Enable Dev Hub.
   - [x] Connect the SFDX to the Salesforce Dev Hub instance: `sfdx force:config:set defaultdevhubusername=[username@instance.com]`
   - [x] Create connected App:
     - [x] Select **Enable OAuth Settings**.
