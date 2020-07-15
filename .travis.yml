@@ -21,8 +21,7 @@ before_install:
   --jwtkeyfile assets/server.key --username abenavides333@curious-koala-2q42z2.com
   --setdefaultdevhubusername -a HubOrg
 script:
-- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg --wait
-  2
+- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg --wait 4
 - sfdx force:org:display -u ciorg
 - sfdx force:source:push -u ciorg
 - sfdx force:apex:test:run -u ciorg --wait 10
