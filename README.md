@@ -57,7 +57,14 @@ The following process describes how to set up CI with GibHub and SFDX.
   - [x] Log in to Travis CI with your GitHub credentials: `travis login --org`
   - [x] Create an encrypted version for the _server.key_ file (use a linux machine to avoid issues with the encryption process): `travis encrypt-file assets/server.key assets/server.key.enc --add`
   - [x] Delete the _server.key_ file.
-- [ ] Create build file (YAML).
+- [x] Create build file (YAML).
+  - [x] Configure build for PR based on the target branch.
+    - [x] Set _CONSUMERKEY_ and _USERNAME_ environment variables to be used in the commands in the YAML file.
+    - [x] Create environment variables available only for the selected branch (create one per branch that needs a different value).
+  - [x] Configure build for every commit into master and develop.
+  
+### Travis observations
+- To skip building a commit (when no code changes are done, for example), use  the commit message to instruct Travis to ignore the commit: `[skip travis] README updated.`
 
 # SFDX development with GitHub
 
