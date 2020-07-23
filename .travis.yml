@@ -3,9 +3,8 @@ branches:
   only:
     - master
     - develop
-
-sudo: true
-os: trusty
+os: linux
+language: java
 cache: false
 env:
 - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
@@ -27,9 +26,20 @@ before_install:
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME
   --setdefaultdevhubusername -a HubOrg
 
-script:
-- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg --wait 4
-- sfdx force:org:display -u ciorg
-- sfdx force:source:push -u ciorg
-- sfdx force:apex:test:run -u ciorg --wait 10
-- sfdx force:org:delete -u ciorg -p
+jobs:
+  include:
+    - stage: code-testing
+      script:
+        - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg --wait 4
+        - sfdx force:org:display -u ciorg
+        - sfdx force:source:push -u ciorg
+        - sfdx force:apex:test:run -u ciorg --wait 10
+        - sfdx force:org:delete -u ciorg -p
+    - stage: app-deploy
+      script:
+        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis/run_on_non_pull_requests; fi'
+
+stages:
+  - code-testing
+  - name: app-deploy
+    if: branch = develop

@@ -76,7 +76,9 @@ The following process describes the steps to follow to develop new features with
 3. Create a new scratch org to work on the development changes: `sfdx force:org:create --setdefaultusername --setalias [scratch-alias] --definitionfile config/project-scratch-def.json`
 4. Push Metadata changes to the new scratch org: `sfdx force:source:push`
 5. Once your changes are ready, Pull Metadata from the scratch org into your local machine: `sfdx force:source:pull`
-6. Commit your changes and create a PR in GitHub to review and merge them.
+6. Set the package file with the components to be deployed (**_manifest/package-to-deploy.xml_**).
+  - To retain generated metadata you can set the [SFDX_MDAPI_TEMP_DIR](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_develop_any_org.htm) environment variable and use the package.xml file generated when you use the force:source commands.
+7. Commit your changes and create a PR in GitHub to review and merge them.
 
 # References
 ## Salesforce CI/CD
@@ -86,3 +88,8 @@ The following process describes the steps to follow to develop new features with
 - [Convert the Metadata Source to Source Format](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_convert_mdapi.htm)
 - [Develop Against Any Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_develop_any_org.htm)
 - [Salesforce DX Developer Guide - Continuous Integration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ci.htm)
+
+## Travis CI
+- [Job Lifecycle](https://docs.travis-ci.com/user/job-lifecycle/)
+- [Building Pull Requests](https://docs.travis-ci.com/user/pull-requests/)
+- [Build Stages](https://docs.travis-ci.com/user/build-stages/)
