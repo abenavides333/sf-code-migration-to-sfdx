@@ -37,7 +37,7 @@ jobs:
         - sfdx force:org:delete -u ciorg -p
     - stage: app-deploy
       script:
-        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis/run_on_non_pull_requests; fi'
+        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis/run_on_non_pull_requests.sh; fi'
 
 stages:
   - code-testing
