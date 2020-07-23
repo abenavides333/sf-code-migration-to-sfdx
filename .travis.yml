@@ -42,4 +42,6 @@ jobs:
 stages:
   - code-testing
   - name: app-deploy
-    if: branch = develop
+    if: |
+      branch = develop AND \
+      type NOT IN (pull_request)
