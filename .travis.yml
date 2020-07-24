@@ -43,5 +43,5 @@ stages:
   - code-testing
   - name: app-deploy
     if: |
-      branch = develop AND \
+      branch IN (develop, master) AND \
       type NOT IN (pull_request)
