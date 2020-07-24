@@ -20,10 +20,15 @@ package.xml
 **objects/Idea
 **objects/StreamActivityAccess
 **objects/CommSubscriptionChannelType
+**objects/CommSubscriptionTiming
+**objects/RevenueElement
 **layouts/Account*
+**layouts/Campaign*
 **layouts/Contact*
 **layouts/Lead*
 **layouts/Opportunity*
+**layouts/Pricebook2*
+**layouts/QuickText*
 **layouts/SocialPost-Social Post Layout.layout
 **layouts/UserAlt-User Profile Layout.layout
 **sharingRules/RequestsForAccessSIQ.sharingRules
