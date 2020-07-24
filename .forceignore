@@ -23,6 +23,7 @@ package.xml
 **objects/CommSubscriptionTiming
 **objects/RevenueElement
 **layouts/Account*
+**layouts/Campaign*
 **layouts/Contact*
 **layouts/Lead*
 **layouts/Opportunity*
